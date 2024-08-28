@@ -28,7 +28,7 @@ class Grouper():
         return labels
 
     @staticmethod
-    def compute_tf_idf_matrix(self, queries):
+    def compute_tf_idf_matrix(queries):
         vectorizer = TfidfVectorizer(
             tokenizer=lambda x: x.split(), stop_words='english')
         return vectorizer.fit_transform(queries)
