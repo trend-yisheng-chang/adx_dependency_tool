@@ -1,9 +1,9 @@
 import json
-from model.function import Function
-from model.table import Table
-from model.page import Page
-from model.query import Query
-from model.tile import Tile
+from .model.function import Function
+from .model.table import Table
+from .model.page import Page
+from .model.query import Query
+from .model.tile import Tile
 from pyspark.sql import SparkSession
 
 
