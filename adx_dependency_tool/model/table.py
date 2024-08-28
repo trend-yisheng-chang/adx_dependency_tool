@@ -1,6 +1,3 @@
-import json
-
-
 class Table():
     def __init__(self, name, db_name, folder):
         self.name = name

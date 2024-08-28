@@ -1,7 +1,7 @@
-from model.function import Function
-from model.table import Table
-from model.graph_node import GraphNode
-from node_type import NodeType
+from .model.function import Function
+from .model.table import Table
+from .model.graph_node import GraphNode
+from .node_type import NodeType
 
 
 class DependencyChecker():

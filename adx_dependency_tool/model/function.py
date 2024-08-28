@@ -1,5 +1,5 @@
 import re
-from kusto_cleaner import clean
+from ..kusto_cleaner import clean
 
 
 class Function():
