@@ -16,4 +16,4 @@ The **ADX Dependency Tool** is a Python package designed to help manage and chec
 You can install the package directly from GitHub:
 
 ```bash
-pip install git+https://github.com/yourusername/adx_dependency_tool.git
+pip install git+https://github.com/trend-yisheng-chang/adx_dependency_tool.git

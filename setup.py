@@ -8,7 +8,7 @@ setup(
     description='A tool for checking dependencies of Azure Data Explorer dashboards.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    url='https://github.com/yourusername/adx_dependency_tool',
+    url='https://github.com/trend-yisheng-chang/adx_dependency_tool.git',
     packages=find_packages(),
     install_requires=[],
     classifiers=[
