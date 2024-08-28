@@ -2,6 +2,7 @@ from .model.function import Function
 from .model.table import Table
 from .model.graph_node import GraphNode
 from .node_type import NodeType
+from .grouper import Grouper
 
 
 class DependencyChecker():
@@ -146,7 +147,9 @@ class DependencyChecker():
         for zodf in zero_out_degree_functions:
             if zodf.title not in called_functions:
                 dependency[zodf.id] = []
-        return dependency, (list(set([n for n in added_nodes])))
+        nodes = list(set([n for n in added_nodes]))
+        node_groups = Grouper.group_by_tfidf([n.content for n in nodes])
+        return dependency, nodes, node_groups
 
     def check_page(self, page_id):
         edges = []
@@ -177,7 +180,9 @@ class DependencyChecker():
         for zodf in zero_out_degree_functions:
             if zodf.title not in called_functions:
                 dependency[zodf.id] = []
-        return dependency, (list(set([n for n in added_nodes])))
+        nodes = list(set([n for n in added_nodes]))
+        node_groups = Grouper.group_by_tfidf([n.content for n in nodes])
+        return dependency, nodes, node_groups
 
     def check_tile(self, tile_id):
         tile = next((t for t in self._tiles if t.tile_id == tile_id), None)
@@ -195,5 +200,6 @@ class DependencyChecker():
                 dependency[e[0].id] = [e[1].id]
             else:
                 dependency[e[0].id].append(e[1].id)
-
-        return dependency, (list(set([n for n in added_nodes])))
+        nodes = list(set([n for n in added_nodes]))
+        node_groups = Grouper.group_by_tfidf([n.content for n in nodes])
+        return dependency, nodes, node_groups

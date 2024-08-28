@@ -10,7 +10,7 @@ setup(
     long_description_content_type='text/markdown',
     url='https://github.com/trend-yisheng-chang/adx_dependency_tool.git',
     packages=find_packages(),
-    install_requires=['pyspark'],
+    install_requires=['pyspark', 'scikit-learn'],
     classifiers=[
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: MIT License',
